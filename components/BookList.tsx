@@ -3,7 +3,7 @@ import BookCard from "./BookCard";
 interface BookListProps {
   title: string;
   books: Book[];
-  containerClassName: string;
+  containerClassName?: string;
 }
 
 const BookList = ({ title, books, containerClassName }: BookListProps) => {
