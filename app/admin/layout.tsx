@@ -1,9 +1,10 @@
+import React from "react";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import React from "react";
+import Sidebar from "@/components/admin/Sidebar";
+import Header from "@/components/admin/Header";
 
 import "@/styles/admin.css";
-import Sidebar from "@/components/admin/Sidebar";
 
 const Layout = async ({ children }: { children: React.ReactNode }) => {
   const session = await auth();
@@ -15,7 +16,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
       <Sidebar session={session} />
 
       <div className="admin-container">
-        <p>Header</p>
+        <Header session={session} />
         {children}
       </div>
     </main>
