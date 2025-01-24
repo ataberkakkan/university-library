@@ -16,7 +16,7 @@ export default async function Home() {
 
   return (
     <>
-      <BookOverview {...latestBooks[0]} userId={session?.user?.id} />
+      <BookOverview {...latestBooks[0]} userId={session?.user?.id as string} />
 
       <BookList
         title="Latest Books"
