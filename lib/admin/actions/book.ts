@@ -13,7 +13,7 @@ export const createBook = async (params: BookParams) => {
       })
       .returning();
 
-    return { success: true, data: JSON.parse(JSON.stringify(newBook)) };
+    return { success: true, data: JSON.parse(JSON.stringify(newBook[0])) };
   } catch (error) {
     console.log(error);
     return {
